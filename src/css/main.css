@@ -108,6 +108,77 @@ body {
     letter-spacing: 2px;
     text-shadow: 4px 2px var(--offset);
 }
+
+.grid-index {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(400px, auto);
+    height: 100%;
+    width: 100%;
+}
+.index-item {
+    height: 100%;
+    width: 100%;
+}
+.index-content {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background: blue; */
+}
+.index-content h2 {
+    transform: translateX(-90px);
+    font-size: 3.1rem
+}
+/* mobile index site wrapper */
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+/* mobile animated grid elements */
+
+.animated-left {
+    background-image: url(img/banner1.webp);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.animated-right {
+    position: absolute;
+    color: var(--main);
+    font-size: 2.5rem;
+    width: 70%;
+    top: 0;
+    right: 0;
+    background: var(--primary);
+
+}
+
+.animated-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    
+    height: 20%;
+}
+
+
+
+
+
 .grid-sml {
     grid-column: span 1;
     grid-row: span 1;
@@ -159,6 +230,7 @@ body {
     text-align: center;
     top: 0;
     width: 15vh;
+    min-width: 250px;
     z-index: 1;
 }
 .nav i {
@@ -402,91 +474,39 @@ body {
     6. animated landing elements
 
 */
-
-/* animated index | landing page */
-.wrapper {
-    height: 100%;
-    position: relative;
-    width: 100%;
-}
-.animated {
-    background-attachment: inherit;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    height: 100%;
-    width: 10%;
-}
-.animated-left {
-    background-image: url(img/banner1.webp);
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 30%;
-    opacity: 0.7;
-}
-
-.animated-right {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    
-    background: var(--primary);
-    width: 70%;
-    height: 70%;
-    top: 0;
-    left: 30%;
-    text-align: center;
-    
-}
-.animated-right h2 {
-    color: white;
-    letter-spacing: 4px;
-    font-size: 4rem;
-    text-align: center;
-    transform: translateX(-590px);
-    /* transform: translateY(-300px); */
-}
-
-
 .enterBtn {
-    border: 5px solid white;
+    
+    align-items: center;
+    background: var(--primary);
+    border: 8px solid var(--main);
     border-radius: 10px;
-    width: 300px;
-    margin: 2%;
+    transform: translateX(0px);
+    position: relative;   
     display: flex;
     justify-content: center;
-    align-content: center;
-    align-items: center;
+        
     font-size: 24px;
     letter-spacing: 2px;
     text-decoration: none;
-    color: #fff;
-    position: absolute;
-    /* bottom: 50px; */
-    top: 200%;
-    left: 50%;
-    /* bottom: 100px; */
-    /* right: 250px; */
-    /* width: 200px; */
-    height: 100px;
+    
+    color: var(--main);
 
+
+    height: 100px;
+    width: 300px;
     
     transition: 300ms all ease-in;
     
 }
 .enterBtn:hover {
     background: white;
+    border-radius: 10px;
     font-weight: bold;
     color: var(--primary);
     text-decoration: underline;
     transition: 300ms all ease-in;
     
 }
-
 
 
 
@@ -534,7 +554,7 @@ body {
         opacity: 1;
     }
 
-    /* navigation */
+ 
     /* top navigation */
     .nav {
         flex-direction: row;
@@ -542,6 +562,7 @@ body {
         height: 20vh;
         position: relative;
         width: 100%;
+        min-width: 100%;
     }
     .nav p,
     .nav a,
@@ -639,51 +660,110 @@ body {
     .footer {
         transform: translateX(0);
     }
+
+    /* mobile index grid content */
+.grid-index {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    width: 100%;
+    height: 100%;
 }
-
-/* 
-
-    8. media query - laptop
-
-*/
-/* laptop | tablet */
-@media only screen and (max-width: 1400px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .animated-nav {
-        width: 15vh;
-    }
-    .wrapper {
-        height: 100%;
-        width: 100%;
-        background: var(--primary);
-    }
-
-    .animated {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        display: none;
-    }
-
-    .animated-left {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    .animated-right {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
+/* .index-item:nth-child(1) {
+    display: none;
+} */
+.index-item {
+    height: 100%;
+    position: relative;
+}
+.index-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.index-content h2 {
+    font-size: 2.2rem;
+    padding: 20px 2px;
+    text-align: center;
+    color: var(--main);
+    transform: translateX(0px);
     
 }
+
+/* mobile index site wrapper */
+.container {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+
+}
+
+/* mobile animated grid elements */
+
+.animated-left {
+top: 0;
+left: 0;
+
+}
+
+.animated-right {
+top: 0;
+right: 0;
+background: var(--primary);
+
+}
+.animated-bottom {
+right: 0;
+bottom: 0;
+}
+
+
+
+
+.enterBtn {
+    
+    align-items: center;
+    background: var(--primary);
+    border: 8px solid var(--primary);
+    border-radius: 10px;
+    transform: translateX(0px);
+    position: relative;   
+    display: flex;
+    justify-content: center;
+        
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    color: var(--main);
+
+
+    height: 100px;
+    width: 300px;
+    
+    transition: 300ms all ease-in;
+    
+}
+.enterBtn:hover {
+    background: white;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: underline;
+    transition: 300ms all ease-in;
+    
+}
+
+
+
+
+
+}
+
+
+
+

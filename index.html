@@ -12,152 +12,170 @@
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
     <script defer src="src/js/index.js"></script>
     <script defer src="src/js/swup.js"></script>
+    
     <!-- icons -->
     <script src="https://kit.fontawesome.com/4dff4a55ad.js"></script>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
 </head>
 <body>
-<!--
-   desktop navigation = side menu
-   mobile navigation = overlay menu
--->
+<!-- site container -->
+<div class="container">
 
-<!-- side navigation menu -->
-<nav class="nav animated-nav">
-    <i class="fas fa-bars" onclick="toggleMenu()"></i>
-    
-    <div class="info">
-        <!-- logo -->
-        <i class="fab fa-uikit"></i>
-        <!-- logo end -->
+    <!--
+    desktop navigation = side menu
+    mobile navigation = overlay menu
+    -->
 
-        <!-- personal info -->
-        <h3>Mr C Harris</h3>
-        <p class="mobile-none">Frontend Web Developer</p>
-        <!-- personal info end-->
-    </div>
-    
-    <!-- sidemenu -->
-    <nav class="sidemenu mobile-hide" >
-        <!-- internal nav elements -->
-        <a href="/projects.html">Projects</a>
-        <a href="/development.html">Websites</a>
-        <a href="/contact.html">Contact</a>
-        <!-- internal nav elements end -->
-    </nav>
-    <!-- sidemenu end -->
-
-    <!-- menu -->
-    <i class="fas fa-bars mobile-none" onclick="toggleMenu()"></i>
-    
-    <!-- quicklinks -->
-    <div class="quicklinks">
-        <a href="mailto:decode.harris@gmail.com">
-            <i class="far fa-envelope"></i>
-        </a>
-
-        <a href="https://github.com/bionic-fish">
-            <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-    </div>
-    <!-- quicklinks end -->
-</nav>
-<!-- side navigation menu end -->
-
-<!--
-    overlay transparent menu | display none - default
-    menu icon event trigger
--->
-
-<!-- menu overlay -->
-<nav class="overlay-closed">
-    <!-- close btn -->
-    <button class="closeBtn" onclick="closeMenu()">X</button>
-    <!-- close btn -->
-
-    <!-- quicklinks -->
-    <div class="quicklinks">
-        <a href="mailto:decode.harris@gmail.com">
-            <i class="far fa-envelope"></i>
-        </a>
-
-        <a href="https://github.com/bionic-fish">
-            <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-    </div>
-    <!-- quicklinks end -->
-
-    <!-- flex -->
-    <div class="flex">
-        <!-- external nav elements -->
-        <a href="projects.html" class="flex-item">
-                <i class="far fa-folder-open"></i>   
-                <p>Projects</p>
-        </a>
-
-        <a href="development.html" class="flex-item">
-            <i class="fas fa-laptop-code"></i>
-            <p>Websites</p>
-        </a>
-
-        <a href="contact.html" class="flex-item">
-            <i class="far fa-envelope"></i>
-            <p>Contact</p>
-        </a>
-        <!-- external nav elements end -->
-    </div>
-    <!-- flex end -->
-    
-    <!-- branding -->
-    <div class="branding">
-        <!-- logo -->
-        <i class="fab fa-uikit"></i>
-        <!-- logo end -->
-
-        <!-- personal info -->
-        <h3>Mr C Harris</h3>
-        <p>Frontend Web Developer</p>
-        <!-- personal info end-->
-    </div>
-    <!-- branding end -->
-</nav>
-<!-- menu overlay end -->
-
-<!--
-    section main animation library attachment 
-    Swup library for transitioning spearate html documents
--->
-
-<!-- main -->
-<section class="transition-slide main" id="swup">
-    <!-- wrapper -->
-    <div class="wrapper">
-        <!-- background banner -->
-        <div class="animated animated-left"></div>
+    <!-- side navigation menu -->
+    <nav class="nav animated-nav">
+        <i class="fas fa-bars" onclick="toggleMenu()"></i>
         
-        <!-- introduction -->
-        <div class="animated animated-right">
-            <div class="animated-title">    
-            <h2>
-                Web Developer<br>
-                Content Creator<br>
-                Technology Expert<br>
-            </h2>
-            <a href="/projects.html" class="enterBtn animated-btn">Enter</a>
-            </div>
-            <!-- animated title end -->
+        <div class="info">
+            <!-- logo -->
+            <i class="fab fa-uikit"></i>
+            <!-- logo end -->
+
+            <!-- personal info -->
+            <h3>Mr C Harris</h3>
+            <p class="mobile-none">Frontend Web Developer</p>
+            <!-- personal info end-->
         </div>
-        <!-- animated right end -->
-    </div>
-    <!-- wrapper end -->
+        
+        <!-- sidemenu -->
+        <nav class="sidemenu mobile-hide" >
+            <!-- internal nav elements -->
+            <a href="/projects.html">Projects</a>
+            <a href="/development.html">Websites</a>
+            <a href="/contact.html">Contact</a>
+            <!-- internal nav elements end -->
+        </nav>
+        <!-- sidemenu end -->
 
-    <!-- wrapper mobile -->
-    <div class="wrapper-mobile">
+        <!-- menu -->
+        <i class="fas fa-bars mobile-none" onclick="toggleMenu()"></i>
+        
+        <!-- quicklinks -->
+        <div class="quicklinks">
+            <a href="mailto:decode.harris@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
 
-    </div>
-</section>
-<!-- main end -->
+            <a href="https://github.com/bionic-fish">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- quicklinks end -->
+    </nav>
+    <!-- side navigation menu end -->
+
+    <!--
+        overlay transparent menu | display none - default
+        menu icon event trigger
+    -->
+
+    <!-- menu overlay -->
+    <nav class="overlay-closed">
+        <!-- close btn -->
+        <button class="closeBtn" onclick="closeMenu()">X</button>
+        <!-- close btn -->
+
+        <!-- quicklinks -->
+        <div class="quicklinks">
+            <a href="mailto:decode.harris@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+
+            <a href="https://github.com/bionic-fish">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- quicklinks end -->
+
+        <!-- flex -->
+        <div class="flex">
+            <!-- external nav elements -->
+            <a href="projects.html" class="flex-item">
+                    <i class="far fa-folder-open"></i>   
+                    <p>Projects</p>
+            </a>
+
+            <a href="development.html" class="flex-item">
+                <i class="fas fa-laptop-code"></i>
+                <p>Websites</p>
+            </a>
+
+            <a href="contact.html" class="flex-item">
+                <i class="far fa-envelope"></i>
+                <p>Contact</p>
+            </a>
+            <!-- external nav elements end -->
+        </div>
+        <!-- flex end -->
+        
+        <!-- branding -->
+        <div class="branding">
+            <!-- logo -->
+            <i class="fab fa-uikit"></i>
+            <!-- logo end -->
+
+            <!-- personal info -->
+            <h3>Mr C Harris</h3>
+            <p>Frontend Web Developer</p>
+            <!-- personal info end-->
+        </div>
+        <!-- branding end -->
+    </nav>
+    <!-- menu overlay end -->
+
+    <!--
+        section main animation library attachment 
+        Swup library for transitioning spearate html documents
+    -->
+    <!-- main -->
+    <section class="transition-slide main" id="swup">
+        <!-- grid layout -->
+        <div class="grid-index">
+            
+            <!-- mobile center | desktop left -->
+            <div class="index-item">
+                <!-- index-content -->
+                <div class="index-content animated-left"></div>
+            </div>
+            <!-- mobile center | desktop left -->
+
+            <!-- mobile top | desktop right -->
+            <div class="index-item">
+                <!-- index-content -->
+                <div class="index-content animated-right">
+                    <h2 class="animated-title">
+                        Web Developer<br>
+                        Content Creator<br>
+                        Technology Expert<br>
+                    </h2>
+                     
+                </div>
+            </div>
+            <!-- mobile top | desktop right end -->
+
+            <div class="index-item">
+                <!-- index-content -->
+                <div class="index-content animated-bottom">
+                    <a href="/projects.html" class="enterBtn animated-btn">Enter</a>
+                </div>
+            </div>
+            
+
+      
+      
+            
+        </div>
+        <!-- grid layout end -->
+    </section>
+    <!-- main end -->
+
+</div>
+<!-- content container end -->
 
 <!-- script ext -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
