@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home | CDH</title>
+    <!-- css -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/swup.css">
+    <!-- js -->
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+    <script defer src="src/js/index.js"></script>
+    <script defer src="src/js/swup.js"></script>
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/4dff4a55ad.js"></script>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--
+   desktop navigation = side menu
+   mobile navigation = overlay menu
+-->
+
+<!-- side navigation menu -->
+<nav class="nav animated-nav">
+    <i class="fas fa-bars" onclick="toggleMenu()"></i>
+    
+    <div class="info">
+        <!-- logo -->
+        <i class="fab fa-uikit"></i>
+        <!-- logo end -->
+
+        <!-- personal info -->
+        <h3>Mr C Harris</h3>
+        <p class="mobile-none">Frontend Web Developer</p>
+        <!-- personal info end-->
+    </div>
+    
+    <!-- sidemenu -->
+    <nav class="sidemenu mobile-hide" >
+        <!-- internal nav elements -->
+        <a href="/projects.html">Projects</a>
+        <a href="/development.html">Websites</a>
+        <a href="/contact.html">Contact</a>
+        <!-- internal nav elements end -->
+    </nav>
+    <!-- sidemenu end -->
+
+    <!-- menu -->
+    <i class="fas fa-bars mobile-none" onclick="toggleMenu()"></i>
+    
+    <!-- quicklinks -->
+    <div class="quicklinks">
+        <a href="mailto:decode.harris@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/bionic-fish">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+    </div>
+    <!-- quicklinks end -->
+</nav>
+<!-- side navigation menu end -->
+
+<!--
+    overlay transparent menu | display none - default
+    menu icon event trigger
+-->
+
+<!-- menu overlay -->
+<nav class="overlay-closed">
+    <!-- close btn -->
+    <button class="closeBtn" onclick="closeMenu()">X</button>
+    <!-- close btn -->
+
+    <!-- quicklinks -->
+    <div class="quicklinks">
+        <a href="mailto:decode.harris@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/bionic-fish">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+    </div>
+    <!-- quicklinks end -->
+
+    <!-- flex -->
+    <div class="flex">
+        <!-- external nav elements -->
+        <a href="projects.html" class="flex-item">
+                <i class="far fa-folder-open"></i>   
+                <p>Projects</p>
+        </a>
+
+        <a href="development.html" class="flex-item">
+            <i class="fas fa-laptop-code"></i>
+            <p>Websites</p>
+        </a>
+
+        <a href="contact.html" class="flex-item">
+            <i class="far fa-envelope"></i>
+            <p>Contact</p>
+        </a>
+        <!-- external nav elements end -->
+    </div>
+    <!-- flex end -->
+    
+    <!-- branding -->
+    <div class="branding">
+        <!-- logo -->
+        <i class="fab fa-uikit"></i>
+        <!-- logo end -->
+
+        <!-- personal info -->
+        <h3>Mr C Harris</h3>
+        <p>Frontend Web Developer</p>
+        <!-- personal info end-->
+    </div>
+    <!-- branding end -->
+</nav>
+<!-- menu overlay end -->
+
+<!--
+    section main animation library attachment 
+    Swup library for transitioning spearate html documents
+-->
+
+<!-- main -->
+<section class="transition-slide main" id="swup">
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- background banner -->
+        <div class="animated animated-left"></div>
+        
+        <!-- introduction -->
+        <div class="animated animated-right">
+            <div class="animated-title">    
+            <h2>
+                Web Developer<br>
+                Content Creator<br>
+                Technology Expert<br>
+            </h2>
+            <a href="/projects.html" class="enterBtn animated-btn">Enter</a>
+            </div>
+            <!-- animated title end -->
+        </div>
+        <!-- animated right end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- wrapper mobile -->
+    <div class="wrapper-mobile">
+
+    </div>
+</section>
+<!-- main end -->
+
+<!-- script ext -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+<script src="src/js/animate.js"></script>
+
+    
+</body>
+</html>
